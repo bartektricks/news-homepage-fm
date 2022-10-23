@@ -1,0 +1,46 @@
+@use './variables' as *;
+
+@font-face {
+  font-family: Inter;
+  src: url("/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  background-color: var(--off-white);
+}
+
+.container {
+  max-width: 110rem;
+  padding: 0 1.6rem;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    padding: 0 2.4rem;
+  }
+}
