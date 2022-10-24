@@ -14,7 +14,7 @@
   export let news: ComponentProps<NewCard>["news"];
 </script>
 
-<section class="hero container">
+<section class="hero section container">
   <div class="picture">
     <Picture {...image} alt={title} />
   </div>
@@ -32,8 +32,6 @@
   @use "../variables" as *;
 
   .hero {
-    margin-bottom: 3.2rem;
-
     @media (min-width: $tablet) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -49,9 +47,12 @@
   }
 
   .news {
-    display: flex;
     grid-row: 1 / span 2;
     grid-column: 3 / span 1;
+
+    @media (min-width: $tablet) {
+      display: flex;
+    }
   }
 
   .title {
@@ -59,6 +60,7 @@
     font-size: 4rem;
     line-height: 1;
     font-weight: 800;
+    color: var(--very-dark-blue);
 
     @media (min-width: $tablet) {
       margin-bottom: 0;

@@ -51,6 +51,8 @@
 
     @media (min-width: $tablet) {
       align-items: flex-end;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
     }
 
     &.is-opened {

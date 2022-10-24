@@ -26,6 +26,7 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.6rem;
+  color: var(--dark-grayish-blue);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -43,4 +44,8 @@ body {
   @media (min-width: $tablet) {
     padding: 0 2.4rem;
   }
+}
+
+.section {
+  margin-bottom: 6.4rem;
 }
