@@ -2,6 +2,7 @@
   import NewCard from "./NewCard.svelte";
   import Button from "./Button.svelte";
   import type { ComponentProps } from "svelte";
+  import Picture from "./Picture.svelte";
 
   export let title: string;
   export let body: string;
@@ -14,10 +15,9 @@
 </script>
 
 <section class="hero container">
-  <picture>
-    <source srcset={image.desktop} media="(min-width: 768px)" />
-    <img class="image" src={image.mobile} alt={title} />
-  </picture>
+  <div class="picture">
+    <Picture {...image} alt={title} />
+  </div>
   <h1 class="title">{title}</h1>
   <div class="wrapper-item">
     <p class="body">{body}</p>
@@ -42,15 +42,10 @@
     }
   }
 
-  .image {
-    height: 30rem;
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 2.4rem;
-  }
-
-  picture {
+  .picture {
     grid-column: 1 / span 2;
+    height: 30rem;
+    margin-bottom: 2.4rem;
   }
 
   .news {
