@@ -29,7 +29,12 @@
 
   .top-list {
     display: flex;
+    flex-direction: column;
     gap: 2.4rem;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+    }
   }
 
   .news-item {
@@ -38,7 +43,7 @@
   }
 
   .image {
-    height: 13rem;
+    height: 100%;
     width: 10rem;
     object-fit: cover;
     margin-right: 2.4rem;
